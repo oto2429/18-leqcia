@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gill Sans", sans-serif;
+}
+@mixin flex_center3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+@mixin flex_center1($jc2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: $jc2;
+}
+
+
+@mixin flex_center2($jc1) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: $jc1;
+}
+
+$background-color: #FFBF23;
+
+
+
+header {
+    width: 100%;
+    height: 126px;
+    padding: 30px 80px;
+    border-top: 11px solid black;
+
+
+    .svg-1 {
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+
+    .nav1 {
+        @include flex_center2(space-between);
+        background-color: white;
+
+
+        .left {
+            @include flex_center2("start");
+            gap: 15px;
+
+            h4 {
+                cursor: pointer;
+            }
+
+        }
+
+        .right {
+            @include flex_center2(start);
+            gap: 35px;
+
+            a {
+                color: black;
+                text-decoration-line: none;
+            }
+
+            a:hover {
+                color: rgb(187, 187, 187);
+                cursor: pointer;
+                transition: 1s;
+            }
+            button{
+                padding: 10px;
+                color: black;
+                background-color: $background-color;
+                width: 100px;
+                border-radius: 5px;
+                border: solid black 3px;
+                font-size: 13px
+            }
+            button:hover{
+                cursor: pointer;
+                color: $background-color;
+                background-color: black;
+                transition: 1s;
+            }
+        }
+
+    }
+}
+
+
+.main1{
+    width: 100%;
+    height: 647px;
+    @include flex_center2(center);
+    gap:150px;
+
+    .main1son1{
+        width: 586.5px;
+        height: 100%;
+        @include flex_center3;
+        gap: 50px;
+
+        h1{
+            font-weight: 400;
+            font-size: 50px;
+        }
+        p{
+            font-weight: 200;
+            font-size: 20px;
+        }
+
+        button{
+                padding: 10px;
+                color: white;
+                background-color: black;
+                width: 100px;
+                border-radius: 5px;
+                font-size: 13px;
+                border: none;
+            }
+            button:hover{
+                cursor: pointer;
+                color: black;
+                background-color:$background-color;
+                transition: 1s;
+                border: 2px solid black;
+            }
+
+        .speed{
+            @include flex_center2(center);
+            gap:60px;
+
+            .speed1{
+                @include flex_center2(start);
+                gap: 10px;
+                p{
+                    font-size: 15px;
+                    font-weight: 100;
+                }
+            }
+        }
+
+    }
+    .main1son2{
+        width: 563px;
+        height: 482px;
+    }
+}
+
+.main2{
+    @include flex_center2(center);
+    gap:40px;
+    background-color: $background-color;
+    width: 100%;
+    height: 488px;
+    margin-top: 100px;
+
+    .main2son2{
+        width: 574px;
+        height: 274.22px;
+        @include flex_center3();
+        
+
+        p{
+            line-height: 1.6;
+            letter-spacing: 0.2px;
+        }
+    }
+    .main2son1{
+        width: 574px;
+        height: 274.22px;
+        @include flex_center3();
+        
+
+        h1{
+            font-weight: 100;
+            font-size: 40px;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+.what{
+    
+    height: 357px;
+    @include flex_center3();
+    gap: 30px;
+    padding-left: 250px;
+    h1{
+        font-weight: 100;
+        font-size: 45;
+    }
+    p{
+        line-height: 1.4;
+        letter-spacing: 0.2px;
+    }
+}
+
+.main3{
+    width: 100%;
+    height: 666px;
+    @include flex_center2(center);
+    gap: 100px;
+    .main3son{
+        width: 267px;
+        height: 666px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        
+
+        img{
+            width: 226px;
+            height: 298px;
+            border: solid black 2.5px;
+            border-radius: 3px;
+        }
+
+        h1{
+            font-weight:700;
+            font-size: 20px;
+        }
+        p{
+            font-weight: 100;
+                 line-height: 1.4;
+            letter-spacing: 0.2px;
+
+        }
+    }
+
+}
